@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Lock files (LibreOffice, etc.)
+.~lock.*
+
 # C extensions
 *.so
 

@@ -12,7 +12,6 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.models.neural_network import NeuralNetwork
-from src.data.dataloader import create_dataloaders
 from src.utils.logger import setup_logger
 from src.utils.training import evaluate
 
@@ -38,12 +37,12 @@ def main(args):
     features = np.random.randn(200, args.input_dim)
     labels = np.random.randint(0, args.output_dim, 200)
     
-    # Create dataloader
-    _, test_loader = create_dataloaders(
-        features, labels,
-        batch_size=args.batch_size,
-        test_size=1.0  # Use all data for testing
-    )
+    # Create dataset and dataloader directly
+    from src.data.dataset import MLDLDataset
+    from torch.utils.data import DataLoader
+    
+    test_dataset = MLDLDataset(features, labels)
+    test_loader = DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False)
     
     # Create model
     model = NeuralNetwork(

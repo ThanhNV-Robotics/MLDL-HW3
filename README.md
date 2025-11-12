@@ -144,25 +144,5 @@ Model comparison based on validation MAPE:
 | Gradient Boosting | TBD% |
 | XGBoost | TBD% |
 
-*Note: Run `main_prediction_model.ipynb` to see actual results*
-
-## Key Features
-
-- ✅ Comprehensive data preprocessing pipeline
-- ✅ Multiple model comparison framework
-- ✅ MAPE-based evaluation for all models
-- ✅ 10-fold cross-validation
-- ✅ Feature importance analysis
-- ✅ Reproducible results with fixed random seeds
-- ✅ Ready-to-submit prediction files
-
-## Future Improvements
-
-- [ ] Hyperparameter tuning with Grid Search / Random Search
-- [ ] Feature selection based on importance scores
-- [ ] Ensemble methods combining multiple models
-- [ ] Additional feature engineering (interaction terms)
-- [ ] Outlier detection and handling
-
 ## License
 This project is for educational purposes (Machine Learning and Deep Learning HW3).

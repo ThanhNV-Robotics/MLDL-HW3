@@ -1,0 +1,26 @@
+# Model configuration
+model:
+  input_dim: 784
+  hidden_dim: 256
+  output_dim: 10
+  dropout_rate: 0.5
+
+# Training configuration
+training:
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  test_size: 0.2
+  random_state: 42
+
+# Data configuration
+data:
+  train_path: "data/raw/train.csv"
+  test_path: "data/raw/test.csv"
+  processed_path: "data/processed/"
+
+# Paths
+paths:
+  model_save_dir: "models/"
+  log_dir: "logs/"
+  results_dir: "results/"
